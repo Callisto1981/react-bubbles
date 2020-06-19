@@ -25,7 +25,10 @@ const Login = props => {
         localStorage.setItem("token", res.data.payload);
         props.history.push("bubbles");
       })
-      .catch(err => console.log(err));
+      .catch(err => {
+        console.log(err);
+        console.log(credentials);
+      });
   };
 
   return (
